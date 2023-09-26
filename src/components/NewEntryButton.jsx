@@ -6,7 +6,7 @@ export const NewEntryButton = ({ onClick }) => {
   const { t } = useTranslation();
 
   return (
-    <Button className={cx.container} onClick={onClick}>
+    <Button className={cx.container} onClick={onClick} dataTestId='newEntryButton'>
       ➕ {t("newEntryButton")}
     </Button>
   );

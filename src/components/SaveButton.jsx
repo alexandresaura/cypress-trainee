@@ -6,7 +6,7 @@ export const SaveButton = () => {
   const { t } = useTranslation();
 
   return (
-    <Button className={cx.button} type="submit">
+    <Button className={cx.button} type="submit" dataTestId='saveButton'>
       {t("saveButton")}
     </Button>
   );

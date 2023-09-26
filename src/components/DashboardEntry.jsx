@@ -14,23 +14,24 @@ export const DashboardEntry = ({ entry, onDelete }) => {
   return (
     <li className={cx.container}>
       <div className={cx.leftRow}>
-        <span>{label}</span>
+        <span data-testId='entryLabel'>{label}</span>
 
-        <span>{formatDate(date)}</span>
+        <span data-testId='entryDate' data-value={date.toISOString()}>{formatDate(date)}</span>
       </div>
 
       <div className={cx.rightRow}>
-        <span>$ {formatNumber(amount)}</span>
+        <span data-testId='entryAmount' data-value={amount}>$ {formatNumber(amount)}</span>
 
         <div className={cx.buttonContainer}>
           <Button
             className={cx.editButton}
             onClick={() => goToEditEntry(entry.id)}
+            dataTestId='entryEditButton'
           >
             ✏️
           </Button>
 
-          <Button className={cx.deleteButton} onClick={onDelete}>
+          <Button className={cx.deleteButton} onClick={onDelete} dataTestId='entryDeleteButton'>
             🗑️
           </Button>
         </div>
