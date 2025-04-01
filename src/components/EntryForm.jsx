@@ -46,6 +46,7 @@ export const EntryForm = ({ title, goToDashboard, onSubmit, entry }) => {
             value={label}
             onChange={(event) => setLabel(event.target.value)}
             label="Label"
+            data-testid="labelInput"
           />
         </div>
 
@@ -55,6 +56,7 @@ export const EntryForm = ({ title, goToDashboard, onSubmit, entry }) => {
             value={amount}
             onChange={(event) => setAmount(event.target.value)}
             label="Amount"
+            data-testid="amountInput"
           />
         </div>
 
@@ -65,6 +67,7 @@ export const EntryForm = ({ title, goToDashboard, onSubmit, entry }) => {
             value={date}
             onChange={(event) => setDate(event.target.value)}
             label="Date"
+            data-testid="dateInput"
           />
         </div>
 
