@@ -80,7 +80,6 @@ function App() {
 
   return (
     <>
-    AUJISHD jikASH DJUIHASIDH AS
       <Header />
 
       <main className={cx.main}>
