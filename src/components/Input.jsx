@@ -8,6 +8,7 @@ export const Input = ({
   name,
   type,
   label,
+  ...rest
 }) => {
   const internalId = useId();
   const id = externalId ?? internalId;
@@ -25,6 +26,7 @@ export const Input = ({
         value={value}
         onChange={onChange}
         type={type}
+        {...rest}
       />
     </div>
   );
